@@ -1,28 +1,41 @@
 package me.ialistannen.wallpaperchanger;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import me.ialistannen.wallpaperchanger.images.provider.ImageProvider;
-import me.ialistannen.wallpaperchanger.images.provider.space.SpaceTelescopeTop100Provider;
+import me.ialistannen.wallpaperchanger.images.provider.ProviderFactory;
 import me.ialistannen.wallpaperchanger.images.util.RandomImageObtainTask;
 import me.ialistannen.wallpaperchanger.wallpaper.WallpaperChanger;
 
 public class MainActivity extends AppCompatActivity {
 
-  private final ImageProvider imageProvider = new SpaceTelescopeTop100Provider();
+  private ImageProvider imageProvider;
   private RetainFragment retainFragment;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+    PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
+
+    imageProvider = ProviderFactory.getInstance(this);
+
+    if (savedInstanceState == null) {
+      setSupportActionBar((Toolbar) findViewById(R.id.activity_main_actionbar));
+    }
 
     if (retainFragment == null) {
       retainFragment = RetainFragment.findOrCreateRetainFragment(getSupportFragmentManager());
@@ -70,6 +83,17 @@ public class MainActivity extends AppCompatActivity {
    */
   public void onAcceptWallpaper(View view) {
     WallpaperChanger.changeTo(retainFragment.getCachedImage(), this);
+  }
+
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu) {
+    getMenuInflater().inflate(R.menu.activity_main_action_bar, menu);
+
+    return true;
+  }
+
+  public void onShowSettings(MenuItem item) {
+    startActivity(new Intent(this, SettingsActivity.class));
   }
 
   public static class RetainFragment extends Fragment {

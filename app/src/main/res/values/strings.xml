@@ -2,6 +2,16 @@
   <string name="app_name">Wallpaper Changer</string>
   <string name="activity_main_next_button">Next Wallpaper</string>
   <string name="activity_main_accept_button">Accept</string>
-  <string name="activity_main_loading_image">Loading image...</string>
+  <string name="activity_main_loading_image">Loading image…</string>
   <string name="activity_main_background_image_preview_description">Background Image preview</string>
+  <string name="activity_main_action_bar_settings_name">Settings</string>
+  <string name="settings_source_category">Image sources</string>
+  <string name="settings_source_chooser_title">Image source</string>
+  <string name="settings_source_chooser_summary">You are currently getting images from \'%s\'.</string>
+  <string name="settings_source_chooser_key">settings_source_chooser_key</string>
+  <string name="settings_automated_changing_category">Automated changing</string>
+  <string name="settings_automated_changing_only_in_wifi_title">Only change in WIFI</string>
+  <string name="settings_automated_changing_only_in_wifi_summary_off">I will always change your wallpaper, no matter if I am using mobile data.</string>
+  <string name="settings_automated_changing_only_in_wifi_summary_on">I will only change the wallpaper when you have a wifi connection.</string>
+  <string name="settings_automated_changing_only_in_wifi_key">settings_automated_changing_only_in_wifi_key</string>
 </resources>

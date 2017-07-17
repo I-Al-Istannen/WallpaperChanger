@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="settings_source_chooser_entry_names">
+    <item>Space Telescope Top 100</item>
+  </string-array>
+  <string-array name="settings_source_chooser_entry_values">
+    <item>spaceTelescopes_Top_100</item>
+  </string-array>
+</resources>

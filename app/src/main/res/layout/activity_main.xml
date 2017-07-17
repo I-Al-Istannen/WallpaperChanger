@@ -5,10 +5,27 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools">
 
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/activity_main_actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="?attr/colorPrimary"
+    android:minHeight="?attr/actionBarSize"
+
+    app:title="Test"
+
+    android:theme="@style/ThemeOverlay.MyApp.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    style="@style/Widget.MyApp.Toolbar.Solid"
+    />
+
   <ImageView
     android:id="@+id/activity_main_background_image_preview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:layout_below="@id/activity_main_actionbar"
 
     android:scaleType="centerCrop"
     android:contentDescription="@string/activity_main_background_image_preview_description"
