@@ -1,7 +1,6 @@
 package me.ialistannen.wallpaperchanger;
 
 import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
 import me.ialistannen.wallpaperchanger.images.provider.ImageProvider;
 import me.ialistannen.wallpaperchanger.images.provider.space.SpaceTelescopeTop100Provider;
 import me.ialistannen.wallpaperchanger.images.util.RandomImageObtainTask;
@@ -53,9 +54,8 @@ public class MainActivity extends AppCompatActivity {
           return;
         }
 
-        BitmapDrawable bitmapDrawable = new BitmapDrawable(getResources(), bitmap);
-        View background = findViewById(R.id.activity_main);
-        background.setBackground(bitmapDrawable);
+        ImageView imageView = (ImageView) findViewById(R.id.activity_main_background_image_preview);
+        imageView.setImageBitmap(bitmap);
 
         retainFragment.setCachedImage(bitmap);
 

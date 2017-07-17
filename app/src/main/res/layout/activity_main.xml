@@ -1,40 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout android:layout_height="match_parent"
+  android:layout_width="match_parent"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/activity_main"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context="me.ialistannen.wallpaperchanger.MainActivity">
+  xmlns:tools="http://schemas.android.com/tools">
 
-  <Button
-    android:text="@string/activity_main_next_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/activity_main_next_button"
-    tools:layout_constraintTop_creator="1"
-    tools:layout_constraintLeft_creator="1"
-    app:layout_constraintRight_toLeftOf="@+id/activity_main_accept_button"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
+  <ImageView
+    android:id="@+id/activity_main_background_image_preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
 
-    android:onClick="onPreviewNextWallpaper"
-    />
-  <Button
-    android:text="@string/activity_main_accept_button"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/activity_main_accept_button"
-    android:layout_marginEnd="16dp"
-    app:layout_constraintRight_toRightOf="parent"
-    android:layout_marginStart="8dp"
-    app:layout_constraintLeft_toRightOf="@id/activity_main_next_button"
-    app:layout_constraintBaseline_toBaselineOf="@id/activity_main_next_button"
-
-    android:onClick="onAcceptWallpaper"
+    android:scaleType="centerCrop"
+    android:contentDescription="@string/activity_main_background_image_preview_description"
     />
 
+  <android.support.constraint.ConstraintLayout
+    android:id="@+id/activity_main"
 
-</android.support.constraint.ConstraintLayout>
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <Button
+      android:text="@string/activity_main_next_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/activity_main_next_button"
+      tools:layout_constraintTop_creator="1"
+      tools:layout_constraintLeft_creator="1"
+      app:layout_constraintRight_toLeftOf="@+id/activity_main_accept_button"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+
+      android:onClick="onPreviewNextWallpaper"
+      />
+    <Button
+      android:text="@string/activity_main_accept_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/activity_main_accept_button"
+      android:layout_marginEnd="16dp"
+      app:layout_constraintRight_toRightOf="parent"
+      android:layout_marginStart="8dp"
+      app:layout_constraintLeft_toRightOf="@id/activity_main_next_button"
+      app:layout_constraintBaseline_toBaselineOf="@id/activity_main_next_button"
+
+      android:onClick="onAcceptWallpaper"
+      />
+
+  </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

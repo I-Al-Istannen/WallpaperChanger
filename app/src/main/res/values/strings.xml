@@ -3,4 +3,5 @@
   <string name="activity_main_next_button">Next Wallpaper</string>
   <string name="activity_main_accept_button">Accept</string>
   <string name="activity_main_loading_image">Loading image...</string>
+  <string name="activity_main_background_image_preview_description">Background Image preview</string>
 </resources>
