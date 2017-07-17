@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 import me.ialistannen.wallpaperchanger.images.provider.ImageProvider;
 import me.ialistannen.wallpaperchanger.images.provider.space.SpaceTelescopeTop100Provider;
 import me.ialistannen.wallpaperchanger.images.util.RandomImageObtainTask;
