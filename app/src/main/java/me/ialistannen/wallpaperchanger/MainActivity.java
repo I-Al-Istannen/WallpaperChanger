@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import me.ialistannen.wallpaperchanger.automaticchanging.WallpaperChangerTask;
 import me.ialistannen.wallpaperchanger.images.provider.ImageProvider;
 import me.ialistannen.wallpaperchanger.images.provider.ProviderFactory;
 import me.ialistannen.wallpaperchanger.images.util.RandomImageObtainTask;
@@ -35,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     if (savedInstanceState == null) {
       setSupportActionBar((Toolbar) findViewById(R.id.activity_main_actionbar));
+
+      new WallpaperChangerTask().registerIfEnabled(this);
     }
 
     if (retainFragment == null) {

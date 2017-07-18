@@ -14,4 +14,9 @@
   <string name="settings_automated_changing_only_in_wifi_summary_off">I will always change your wallpaper, no matter if I am using mobile data.</string>
   <string name="settings_automated_changing_only_in_wifi_summary_on">I will only change the wallpaper when you have a wifi connection.</string>
   <string name="settings_automated_changing_only_in_wifi_key">settings_automated_changing_only_in_wifi_key</string>
+  <string name="wallpaper_changer_task_changing_now">Changing the wallpaper now :)</string>
+  <string name="settings_automated_changing_enabled_key">settings_automated_changing_enabled_key</string>
+  <string name="settings_automated_changing_enabled_title">Automatic changing</string>
+  <string name="settings_automated_changing_enabled_summary_off">Automated changing is off.</string>
+  <string name="settings_automated_changing_enabled_summary_on">Automated changing is on.</string>
 </resources>

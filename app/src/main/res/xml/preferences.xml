@@ -20,6 +20,15 @@
     android:title="@string/settings_automated_changing_category">
 
     <SwitchPreference
+      android:key="@string/settings_automated_changing_enabled_key"
+
+      android:title="@string/settings_automated_changing_enabled_title"
+      android:summaryOff="@string/settings_automated_changing_enabled_summary_off"
+      android:summaryOn="@string/settings_automated_changing_enabled_summary_on"
+      android:defaultValue="false"
+      />
+
+    <SwitchPreference
       android:key="@string/settings_automated_changing_only_in_wifi_key"
 
       android:title="@string/settings_automated_changing_only_in_wifi_title"
