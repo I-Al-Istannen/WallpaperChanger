@@ -20,4 +20,8 @@
   <string name="settings_automated_changing_enabled_summary_off">Automated changing is off.</string>
   <string name="settings_automated_changing_enabled_summary_on">Automated changing is on.</string>
   <string name="preference_duration_input_spinner_separator">:</string>
+  <string name="preference_duration_input_description_hour_text">Hours</string>
+  <string name="preference_duration_input_description_day_text">Days</string>
+  <string name="preference_duration_input_description_minute_text">Minutes</string>
+  <string name="preference_duration_input_description_second_text">Seconds</string>
 </resources>
