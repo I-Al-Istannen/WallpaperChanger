@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+  >
 
   <PreferenceCategory
     android:title="@string/settings_source_category">
@@ -40,8 +41,9 @@
     <me.ialistannen.wallpaperchanger.view.settings.DurationInputPreference
       android:title="Test"
       android:key="Test"
-      android:dialogTitle="Dialog!"
-      android:summary="Test"
+      android:dialogTitle="Select a duration!"
+      android:summary="I will change the wallpape every '%s'."
+      android:defaultValue="2000"
       />
 
   </PreferenceCategory>

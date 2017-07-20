@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="DurationInputPreference">
+    <attr name="enable_days" format="boolean"/>
+    <attr name="enable_hours" format="boolean"/>
+    <attr name="enable_minutes" format="boolean"/>
+    <attr name="enable_seconds" format="boolean"/>
+  </declare-styleable>
+</resources>

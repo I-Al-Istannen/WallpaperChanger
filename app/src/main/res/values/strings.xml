@@ -24,4 +24,5 @@
   <string name="preference_duration_input_description_day_text">Days</string>
   <string name="preference_duration_input_description_minute_text">Minutes</string>
   <string name="preference_duration_input_description_second_text">Seconds</string>
+  <string formatted="false" name="preference_duration_input_summary_duration_format">%d d, %d h, %d m, %d s</string>
 </resources>
