@@ -37,5 +37,12 @@
       android:defaultValue="true"
       />
 
+    <me.ialistannen.wallpaperchanger.view.settings.DurationInputPreference
+      android:title="Test"
+      android:key="Test"
+      android:dialogTitle="Dialog!"
+      android:summary="Test"
+      />
+
   </PreferenceCategory>
 </PreferenceScreen>
