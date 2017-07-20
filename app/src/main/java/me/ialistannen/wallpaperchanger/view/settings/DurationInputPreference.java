@@ -32,7 +32,7 @@ public class DurationInputPreference extends DialogPreference {
   protected void onBindDialogView(View view) {
     super.onBindDialogView(view);
 
-    NumberPicker numberPicker = view.findViewById(R.id.TESTE_ME);
+    NumberPicker numberPicker = view.findViewById(R.id.preference_duration_input_spinner_days);
     numberPicker.setMinValue(0);
     numberPicker.setMaxValue(100);
   }
