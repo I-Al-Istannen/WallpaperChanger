@@ -183,6 +183,10 @@ public class ScreenOnReceiver extends BroadcastReceiver {
       protected void onPostExecute(Bitmap bitmap) {
         super.onPostExecute(bitmap);
 
+        if (bitmap == null) {
+          return;
+        }
+
         WallpaperChanger.changeTo(bitmap, context);
       }
     }.execute(ProviderFactory.getInstance(context));

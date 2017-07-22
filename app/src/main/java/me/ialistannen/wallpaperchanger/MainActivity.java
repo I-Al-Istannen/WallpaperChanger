@@ -15,14 +15,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import me.ialistannen.wallpaperchanger.automatedchanging.ForegroundBroadcastRegistrationService;
-import me.ialistannen.wallpaperchanger.images.provider.ImageProvider;
 import me.ialistannen.wallpaperchanger.images.provider.ProviderFactory;
 import me.ialistannen.wallpaperchanger.images.util.RandomImageObtainTask;
 import me.ialistannen.wallpaperchanger.wallpaper.WallpaperChanger;
 
 public class MainActivity extends AppCompatActivity {
 
-  private ImageProvider imageProvider;
   private RetainFragment retainFragment;
 
   @Override
@@ -31,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
-
-    imageProvider = ProviderFactory.getInstance(this);
 
     if (savedInstanceState == null) {
       setSupportActionBar((Toolbar) findViewById(R.id.activity_main_actionbar));
@@ -76,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.activity_main_accept_button).setEnabled(true);
       }
-    }.execute(imageProvider);
+    }.execute(ProviderFactory.getInstance(this));
   }
 
   /**

@@ -6,6 +6,7 @@ import android.preference.PreferenceManager;
 import java.util.HashMap;
 import java.util.Map;
 import me.ialistannen.wallpaperchanger.R;
+import me.ialistannen.wallpaperchanger.images.provider.reddit.RedditImageProvider;
 import me.ialistannen.wallpaperchanger.images.provider.space.SpaceTelescopeTop100Provider;
 
 /**
@@ -19,6 +20,8 @@ public final class ProviderFactory {
 
   private ProviderFactory() {
     providerMap.put("spaceTelescopes_Top_100", new SpaceTelescopeTop100Provider());
+    providerMap.put("reddit_earthporn", new RedditImageProvider("earthporn"));
+    providerMap.put("reddit_naturepics", new RedditImageProvider("naturepics"));
   }
 
   /**

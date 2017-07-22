@@ -2,8 +2,12 @@
 <resources>
   <string-array name="settings_source_chooser_entry_names">
     <item>Space Telescope Top 100</item>
+    <item>Reddit EarthPorn</item>
+    <item>Reddit NaturePics</item>
   </string-array>
   <string-array name="settings_source_chooser_entry_values">
     <item>spaceTelescopes_Top_100</item>
+    <item>reddit_earthporn</item>
+    <item>reddit_naturepics</item>
   </string-array>
 </resources>
