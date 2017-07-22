@@ -25,8 +25,6 @@ public class RandomImageObtainTask extends AsyncTask<ImageProvider, Void, Bitmap
 
     String imageUrlString = imageProvider.getRandomImageUrl();
 
-    System.out.println(imageUrlString);
-
     try {
       return doExceptional(imageUrlString);
     } catch (IOException e) {

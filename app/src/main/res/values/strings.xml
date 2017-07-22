@@ -25,4 +25,8 @@
   <string name="preference_duration_input_description_minute_text">Minutes</string>
   <string name="preference_duration_input_description_second_text">Seconds</string>
   <string formatted="false" name="preference_duration_input_summary_duration_format">%d d, %d h, %d m, %d s</string>
+  <string name="settings_automated_changing_duration_title">Duration between changes</string>
+  <string name="settings_automated_changing_duration_key">settings_automated_changing_duration_key</string>
+  <string name="settings_automated_changing_duration_dialog_title">Select a duration!</string>
+  <string name="settings_automated_changing_duration_summary">I will change the wallpaper every \'%s\'.</string>
 </resources>

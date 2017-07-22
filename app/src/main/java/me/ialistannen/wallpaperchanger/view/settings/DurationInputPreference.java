@@ -119,8 +119,8 @@ public class DurationInputPreference extends DialogPreference {
     super.onSetInitialValue(restorePersistedValue, defaultValue);
 
     long defaultLongValue;
-    if (defaultValue != null && defaultValue instanceof CharSequence) {
-      defaultLongValue = Long.parseLong(defaultValue.toString());
+    if (defaultValue != null && defaultValue instanceof Long) {
+      defaultLongValue = (Long) defaultValue;
     } else {
       defaultLongValue = 0;
     }
@@ -136,7 +136,12 @@ public class DurationInputPreference extends DialogPreference {
 
   @Override
   protected Long onGetDefaultValue(TypedArray a, int index) {
-    return Long.parseLong(a.getString(index));
+    String defaultValue = a.getString(index);
+
+    if (defaultValue == null) {
+      return TimeUnit.HOURS.toMillis(1);
+    }
+    return Long.parseLong(defaultValue);
   }
 
   @Override
